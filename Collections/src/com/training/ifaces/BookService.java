@@ -1,7 +1,7 @@
 package com.training.ifaces;
 
 import java.util.List;
-
+import java.util.function.Predicate;
 import java.security.Provider.Service;
 
 import java.util.ArrayList;
@@ -78,5 +78,29 @@ public class BookService implements CrudRespository {
 //		}
 		return newBook;
 	}
+	
+	public List<Book>getBooksGrtThan(double price){
+		
+		List<Book>grtThanList = new ArrayList<>();
+		
+		Predicate<Double> grtThan = (value)-> value>price;
+		
+		this.bookList.forEach(book ->
+		{
+			
+			double bookPrice = book.getPrice();
+			
+			if(grtThan.test(bookPrice)) {
+			
+				grtThanList.add(book);
+			}
+		
+		});
+		
+		
+		return grtThanList;
+	}
+	
+	
 	
 }

@@ -1,5 +1,6 @@
 package com.training;
 
+import java.io.ObjectInputStream.GetField;
 import java.util.List;
 
 import com.training.ifaces.BookService;
@@ -28,10 +29,10 @@ public class Application {
 		
 		Book html = new Book(104,"Html","Venki",1450);
 		
-		Book python = new Book(105,"Python","Gokul",850);
+		Book python = new Book(105,"Python","Gokul",50);
 		
 		CrudRespository service = new BookService();
-		
+						
 		System.out.println(service.add(java));
 		
 		//service.add(java);
@@ -43,6 +44,15 @@ public class Application {
 		service.add(html);
 		
 		service.add(python);
+		
+		List<Book>bookList2 = ((BookService)service).getBooksGrtThan(600);
+
+		
+        System.out.println("++++++++++++++++++++++++");
+		
+		bookList2.forEach(System.out::println);
+		
+		System.out.println("++++++++++++++++++++++++");
 		
 		List<Book> bookList = service.findAll();
 		
@@ -79,6 +89,7 @@ public class Application {
 		
 		print(service.findAll());
 		
+		System.out.println();
 	}
 
 }
