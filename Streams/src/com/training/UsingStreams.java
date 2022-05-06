@@ -28,7 +28,7 @@ public class UsingStreams {
 	
 	public static void collectToSet(List<Book>bookList) {
 		
-		Set<Book>bookSet = bookList.stream().filter(e -> e.getPrice()>500).collect(toSet());
+	Set<Book>bookSet = bookList.stream().filter(e -> e.getPrice()>500).collect(toSet());
 		
 		bookSet.forEach(System.out::println);
 	}
@@ -51,6 +51,7 @@ public class UsingStreams {
 		Optional<Book> optional = bookList.stream()
 				
 				.max(Comparator.comparing(Book::getPrice));
+		
 		
 		if(optional.isPresent()) {
 			
@@ -124,7 +125,6 @@ public class UsingStreams {
 		
 		findBookNameHasv(bookList);
 		
-
 	}
 
 }
