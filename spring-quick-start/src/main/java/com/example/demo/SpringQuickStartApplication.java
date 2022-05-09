@@ -6,13 +6,26 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import org.springframework.context.ApplicationContext;
 
+import org.springframework.context.annotation.Bean;
+
+import org.springframework.context.annotation.ComponentScan;
+
+import org.springframework.context.annotation.Primary;
+
+import org.training.model.Author;
+
+import org.training.model.Book;
+
 import com.example.demo.model1.Bill;
+
 import com.example.demo.model1.CustomerList;
+
 import com.example.demo.model1.Invoice;
 
 import com.example.demo.model1.Teacher;
 
 @SpringBootApplication
+@ComponentScan(basePackages= {"org.training","com.example"})
 public class SpringQuickStartApplication {
 
 	public static void main(String[] args) {
@@ -20,6 +33,10 @@ public class SpringQuickStartApplication {
 		ApplicationContext ctx =SpringApplication
 				
 				.run(SpringQuickStartApplication.class, args);
+		
+		System.out.println(ctx.getBean(Book.class));
+		
+		System.out.println("Author:"+ctx.getBean(Author.class));
 		
 	    Invoice inv = ctx.getBean(Invoice.class);
 		
@@ -35,6 +52,21 @@ public class SpringQuickStartApplication {
 			
 			list.getCustList().forEach(System.out::println);
 			
+		
+	}
+	
+	@Bean
+	public Author hari() {
+		
+		return new Author(101,"Harish Kumar");
+		
+	}
+	
+	@Bean
+	@Primary
+	public Author mani() {
+		
+		return new Author(102,"Mani");
 		
 	}
 	

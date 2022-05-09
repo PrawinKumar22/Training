@@ -5,8 +5,11 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import com.example.demo.model1.Customer;
+
 import com.example.demo.model1.Product;
+
 import com.example.demo.model1.Student;
+
 import com.example.demo.model1.Teacher;
 
 @Configuration
