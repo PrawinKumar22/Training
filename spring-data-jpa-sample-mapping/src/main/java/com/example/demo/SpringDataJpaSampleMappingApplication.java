@@ -13,13 +13,13 @@ import com.example.demo.entity.Doctor;
 import com.example.demo.services.DoctorService;
 
 @SpringBootApplication
-public class SpringDataJapSampleMappingApplication {
+public class SpringDataJpaSampleMappingApplication {
 
 	public static void main(String[] args) {
 		
 		ConfigurableApplicationContext ctx =
 				
-				SpringApplication.run(SpringDataJapSampleMappingApplication.class, args);
+				SpringApplication.run(SpringDataJpaSampleMappingApplication.class, args);
 		
 		Doctor siva = ctx.getBean(Doctor.class);
 		

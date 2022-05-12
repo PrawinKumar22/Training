@@ -10,16 +10,16 @@
 <h1>${object}</h1>
 <br>
 <br>
-<a href ="http://localhost:8080/product"><h1>ADD</h1></a>
+<a href ="product">ADD</a>
 <br>
 <br>
-<a href ="http://localhost:8080/search"><h2>SEARCH<h2></a>
+<a href ="search">SEARCH</a>
 <br>
 <br>
-<a href ="http://localhost:8080/delete"><h2>DELETE<h2></a>
+<a href ="delete">DELETE</a>
 <br>
 <br>
-<a href="http://localhost:8080/mvc/home"><h3>FindAll<h3></a>
+<a href="mvc/home">FindAll</a>
 </body>
 
 </html>
