@@ -36,8 +36,7 @@ public class TreeSetApplication {
 			System.out.println(eachStudent.getFirstName());
 			
 		}
-		
-
+		 
 	}
 
 }
