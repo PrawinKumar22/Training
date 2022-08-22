@@ -21,9 +21,9 @@ public class UserDetailsService {
 		this.repo = repo;
 	}
 	
-//	public UserDetails add(UserDetails entity) {
-//		
-//		return this.repo.save(entity);
-//	}
+	public UserDetails add(UserDetails entity) {
+		
+		return this.repo.save(entity);
+	}
 
 }

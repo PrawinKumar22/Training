@@ -1,10 +1,13 @@
-package com.training;
+ package com.training;
 
 import java.util.Scanner;
 
 import com.training.exception.RangeCheckException;
+
 import com.training.model.Student;
+
 import com.training.services.ExceptionHandling;
+
 import com.training.services.StudentService;
 
 public class Application {

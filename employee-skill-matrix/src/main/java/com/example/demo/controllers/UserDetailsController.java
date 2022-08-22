@@ -3,7 +3,7 @@ package com.example.demo.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.web.bind.annotation.PostMapping;
-
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import org.springframework.web.bind.annotation.RestController;
@@ -24,9 +24,9 @@ public class UserDetailsController {
 		this.service = service;
 	}
 	
-//	@PostMapping(path = "/add")
-//	public UserDetails add(UserDetails entity) {
-//		
-//		return this.service.add(entity);
-//	}
+	@PostMapping(path = "/add")
+	public UserDetails add(@RequestBody UserDetails entity) {
+		
+		return this.service.add(entity);
+	}
 }

@@ -16,6 +16,7 @@ public interface EmployeeSkillsRepository extends JpaRepository<EmployeeSkills,I
 	
 	List<EmployeeSkills> findByStatus(String status);
 	
-//	EmployeeSkills addSkill(String skill);
+//	EmployeeSkills addSkill(String skill); 
+	
 	
 }

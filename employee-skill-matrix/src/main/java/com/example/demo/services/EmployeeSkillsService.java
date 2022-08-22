@@ -80,9 +80,5 @@ public class EmployeeSkillsService {
 	
 	}
 	
-//    public EmployeeSkills addSkill(String addSkill) {
-//		
-//		return this.repo.addSkill(addSkill);
-//		
-//	}
+
 }
